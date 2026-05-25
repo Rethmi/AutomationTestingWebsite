@@ -1,75 +1,129 @@
-# 🧪 Automation Testing Website
+# 🧪 Automation Testing Website (Selenium + BDD Framework)
 
-## 📌 Overview
-This is an Automation Testing Framework for an e-commerce web application.  
-It is built using **Selenium WebDriver, Cucumber, TestNG**, and follows the **BDD (Behavior Driven Development)** approach.
+## 📌 Project Overview
+This is a robust **Automation Testing Framework** developed for an e-commerce web application.
 
-The project automates key user flows such as login, product search, cart operations, and checkout process.
+It is built using **Selenium WebDriver, Cucumber (BDD), TestNG, and Java**, following industry-standard automation practices such as **Page Object Model (POM)** and modular test design.
+
+The framework is designed to automate end-to-end user flows including:
+- User authentication (Login/Logout)
+- Product search and filtering
+- Add to cart functionality
+- Checkout process
+- Order validation
+
+---
+
+## 🏗️ Architecture / Framework Design
+This framework follows a **hybrid automation architecture** combining:
+
+- 🧩 Page Object Model (POM)
+- 🧪 BDD (Cucumber Feature Files)
+- ⚙️ TestNG Test Execution Layer
+- 🔁 Reusable Utility Layer
+- 🔗 Hook-based setup & teardown
+
+This ensures **scalability, maintainability, and reusability**.
 
 ---
 
 ## 🚀 Tech Stack
-- Java
+- Java (Core Language)
 - Selenium WebDriver
-- Cucumber (BDD)
-- TestNG
-- Maven
-- Page Object Model (POM)
+- Cucumber (BDD Framework)
+- TestNG (Test Execution & Assertions)
+- Maven (Build Tool)
+- WebDriver Manager (Browser Management)
+- Page Object Model (Design Pattern)
 
 ---
 
 ## 📂 Project Structure
 
-src/test/java
+
+AutomationTestingWebsite/
 │
-├── features # Cucumber feature files
-├── stepDefinitions # Step definition classes
-├── runners # Test runner classes
-├── hooks # Setup & teardown hooks
-├── pages # Page Object Model classes
+├── src/
+│   └── test/
+│       ├── java/
+│       │   │
+│       │   ├── features/              # Cucumber feature files (Gherkin syntax)
+│       │   │
+│       │   ├── stepDefinitions/       # Step definition classes
+│       │   │
+│       │   ├── runners/               # Test Runner classes (Cucumber + TestNG)
+│       │   │
+│       │   ├── hooks/                 # Setup & teardown hooks (@Before, @After)
+│       │   │
+│       │   ├── pages/                 # Page Object Model (POM) classes
+│       │   │   ├── LoginPage.java
+│       │   │   ├── HomePage.java
+│       │   │   ├── ProductPage.java
+│       │   │   └── CheckoutPage.java
+│       │   │
+│       │   ├── utils/                 # Utility classes (Waits, Config, Helpers)
+│       │   │
+│       │   └── testData/             # Test data providers (if used)
+│       │
+│       └── resources/
+│           ├── config/               # Configuration files (properties)
+│           ├── drivers/              # WebDriver executables (optional)
+│           └── reports/              # Test execution reports
 │
-src/test/resources
-│
-├── config # Configuration files
+├── pom.xml                           # Maven dependencies and build config
+└── README.md
 
 
 ---
 
-## 🎯 Features
-- BDD framework using Gherkin syntax
-- Page Object Model (POM) design pattern
-- Reusable and maintainable test scripts
-- Test execution using TestNG
-- Cross-browser testing support (optional)
-- Easy integration with CI/CD pipelines
+## 🎯 Key Features
+- 📌 BDD approach using Cucumber (Gherkin syntax)
+- 🧱 Page Object Model (POM) design pattern
+- 🔄 Reusable and maintainable framework structure
+- 🧪 Automated functional test coverage
+- 🌐 Cross-browser testing support
+- ⚡ Maven-based dependency management
+- 📊 Test execution reports generation
+- 🔗 Easy integration with CI/CD pipelines (Jenkins/GitHub Actions)
 
 ---
 
-## ▶️ How to Run
+## ▶️ How to Run the Project
 
+### 1️⃣ Clone Repository
 ```bash
 git clone https://github.com/your-username/AutomationTestingWebsite.git
-Step 1:
+2️⃣ Import Project
 
-Import project into IntelliJ / Eclipse as a Maven project
+Open in:
 
-Step 2:
-
-Install dependencies:
-
+IntelliJ IDEA OR
+Eclipse IDE
+as a Maven Project
+3️⃣ Install Dependencies
 mvn clean install
-Step 3:
+4️⃣ Run Tests
 
-Run tests:
+You can run tests using:
 
-Run TestRunner class
-or
-Execute testng.xml
+TestRunner class (Cucumber Runner)
+OR testng.xml file
+OR Maven command:
+mvn test
 📊 Reports
 
-After execution, test reports will be generated in:
+After execution, test reports will be available in:
 
-/target/cucumber-reports
+/target
+
+(Depends on reporting plugin used: Cucumber / Extent Reports)
+
+🔧 Future Improvements
+CI/CD integration with Jenkins / GitHub Actions
+Extent Reports / Allure Reports integration
+Parallel test execution
+Dockerized test execution environment
+API + UI hybrid automation layer
+
 👨‍💻 Author
-
 Sainsa Rethmi Thennakoon
