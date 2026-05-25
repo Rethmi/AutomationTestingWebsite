@@ -40,43 +40,32 @@ This ensures **scalability, maintainability, and reusability**.
 
 ## 📂 Project Structure
 
-
+```
 AutomationTestingWebsite/
 │
 ├── src/
-│   └── test/
-│       ├── java/
-│       │   │
-│       │   ├── features/              # Cucumber feature files (Gherkin syntax)
-│       │   │
-│       │   ├── stepDefinitions/       # Step definition classes
-│       │   │
-│       │   ├── runners/               # Test Runner classes (Cucumber + TestNG)
-│       │   │
-│       │   ├── hooks/                 # Setup & teardown hooks (@Before, @After)
-│       │   │
-│       │   ├── pages/                 # Page Object Model (POM) classes
-│       │   │   ├── LoginPage.java
-│       │   │   ├── HomePage.java
-│       │   │   ├── ProductPage.java
-│       │   │   └── CheckoutPage.java
-│       │   │
-│       │   ├── utils/                 # Utility classes (Waits, Config, Helpers)
-│       │   │
-│       │   └── testData/             # Test data providers (if used)
-│       │
-│       └── resources/
-│           ├── config/               # Configuration files (properties)
-│           ├── drivers/              # WebDriver executables (optional)
-│           └── reports/              # Test execution reports
+│ └── test/
+│ ├── java/
+│ │ ├── features/
+│ │ ├── stepDefinitions/
+│ │ ├── runners/
+│ │ ├── hooks/
+│ │ ├── pages/
+│ │ ├── utils/
+│ │ └── testData/
+│ │
+│ └── resources/
+│ ├── config/
+│ ├── drivers/
+│ └── reports/
 │
-├── pom.xml                           # Maven dependencies and build config
+├── pom.xml
 └── README.md
-
-
+```
 ---
 
 ## 🎯 Key Features
+
 - 📌 BDD approach using Cucumber (Gherkin syntax)
 - 🧱 Page Object Model (POM) design pattern
 - 🔄 Reusable and maintainable framework structure
@@ -119,6 +108,7 @@ After execution, test reports will be available in:
 (Depends on reporting plugin used: Cucumber / Extent Reports)
 
 🔧 Future Improvements
+
 CI/CD integration with Jenkins / GitHub Actions
 Extent Reports / Allure Reports integration
 Parallel test execution
